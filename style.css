@@ -41,7 +41,7 @@ body {
 
     border-bottom-width: 2.5px;
     border-bottom-style: solid;
-    border-bottom-color: #f2f2f2;
+    border-bottom-color: black;
 
     color: rgb(51, 51, 51) !important;
     background-color: transparent !important;
@@ -51,7 +51,7 @@ body {
 .nav-pills > li > a:hover {
 	border-bottom-width: 2.5px;
     border-bottom-style: solid;
-    border-bottom-color: #f2f2f2;
+    border-bottom-color: black;
 
 }
 .nav-pills > li > a {
@@ -178,7 +178,7 @@ body {
 }
 #fullWidth_tile {
 	margin-top: 18px;
-	background-color: #eeeeee;
+	background-color: #f6f6f6;
 	height: 300px;
 	border-width: 1.5px;
     border-style: solid;
@@ -186,15 +186,23 @@ body {
 }
 #usStates_tile {
 	margin-top: 18px;
-	background-color: #eeeeee;
+	background-color: #f6f6f6;
 	height: 550px;
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+}
+#table_tile {
+	margin-top: 18px;
+	background-color: #f6f6f6;
+	height: 345px;
 	border-width: 1.5px;
     border-style: solid;
     border-color: lightgrey;
 }
 #overview_tile {
 	margin-top: 18px;
-	background-color: #eeeeee;
+	background-color: #f6f6f6;
 	height: 525px;
 	border-width: 1.5px;
     border-style: solid;
@@ -204,6 +212,12 @@ body {
 	font: 10px sans-serif;
 	position:relative;
 	float:left;
+}
+#energychart {
+	stroke: #777;
+	stroke-width: 0.1px;
+	height: 750px;
+
 }
 .metricFilter {
 	font: 10px sans-serif;
@@ -243,4 +257,15 @@ body {
   	border: solid 1px #aaa;
   	border-radius: 8px;
   	pointer-events: none;
+}
+table path {
+	stroke: #B9090B;
+	stroke-width: 1;
+	fill: none;		
+}
+table rect {
+	fill: #B9090B;
+}
+#who_table {
+	margin-top:-20px;
 }

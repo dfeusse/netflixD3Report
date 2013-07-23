@@ -146,7 +146,8 @@ var group = svg.append("g")
 var color_scale = d3.scale.linear()
 	.domain([0, d3.max(data, function(d) {return d.value }) ])
 	//.range(["#01C6E0", "#8C00C2"]);
-	.range(['#b7b7ff', '#0000a3']);
+	//.range(['white', '#B9090B']);
+  .range(['#f41b1d', '#700507']);
 
 var rects = group.selectAll('rect')
 	.data(data)
@@ -175,7 +176,7 @@ var text = rects.append('text')
 	//.attr('fill', 'steelblue')
 	.attr('fill', 'black')
 	.attr("text-anchor", "middle")
-	.style("font-size","16px");
+	.style("font-size","14px");
 
 
 
