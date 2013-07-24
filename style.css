@@ -114,13 +114,17 @@ body {
 }
 #data_tile {
 	margin-top: 18px;
-	background-color: #eeeeee;
+	background-color: #fafafa;
 	border: 2px;
 	border-color: black;
 	/* height: 120px; */
 	border-width: 1.5px;
     border-style: solid;
     border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:red;
 
 /*
 .jumbotron {
@@ -133,32 +137,120 @@ body {
 }
 */
 }
+#post_data_tile {
+	margin-top: 18px;
+	background-color: #fafafa;
+	border: 2px;
+	border-color: black;
+	/* height: 120px; */
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:#1c578c;
+}
+#impression_data_tile {
+	margin-top: 18px;
+	background-color: #fafafa;
+	border: 2px;
+	border-color: black;
+	/* height: 120px; */
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:#f29e38;
+}
+#passion_data_tile {
+	margin-top: 18px;
+	background-color: #fafafa;
+	border: 2px;
+	border-color: black;
+	/* height: 120px; */
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:#dd4646;
+}
+#positive_data_tile {
+	margin-top: 18px;
+	background-color: #fafafa;
+	border: 2px;
+	border-color: black;
+	/* height: 120px; */
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:#f2d750;
+}
+#negative_data_tile {
+	margin-top: 18px;
+	background-color: #fafafa;
+	border: 2px;
+	border-color: black;
+	/* height: 120px; */
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:#f2e0c9;
+}
+#netsentiment_data_tile {
+	margin-top: 18px;
+	background-color: #fafafa;
+	border: 2px;
+	border-color: black;
+	/* height: 120px; */
+	border-width: 1.5px;
+    border-style: solid;
+    border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:#5787a5;
+}
 
 
 /* three layers of the 6 data tiles */
 .tile { position: relative; width:220px;}
-#top { background: #ee3e64; height:45px;}
+#top { /*background: #ee3e64;*/ height:35px;}
 #middle { 
-	background: #44accf; 
-	height:100px;
-	text-align: center;
+	/*background: #44accf;*/
+	height:80px;
+	/*text-align: center;
 	vertical-align: middle;
-	line-height: 90px;  
+	line-height: 90px;  */
 }
 #bottom { 
-	background: #b7d84b; 
-	height:100px;
-	text-align: center;
+	/*background: #b7d84b;*/ 
+	height:70px;
+	/*text-align: center;
 	vertical-align: middle;
-	line-height: 100px;  
+	line-height: 100px;  */
 }
 .week_data {
-	font-size: 28.5px;
+	font-size: 32.5px;
 	font-weight: bold;
 }
 .total_data {
 	font-size: 20.5px;
 	font-weight: bold;
+	color:grey;
+}
+.total_data_label {
+	color:grey;
 }
 /*end of three layers of the 6 data tiles */
 
@@ -178,7 +270,7 @@ body {
 }
 #fullWidth_tile {
 	margin-top: 18px;
-	background-color: #f6f6f6;
+	background-color: #fafafa;
 	height: 300px;
 	border-width: 1.5px;
     border-style: solid;
@@ -186,27 +278,39 @@ body {
 }
 #usStates_tile {
 	margin-top: 18px;
-	background-color: #f6f6f6;
+	background-color: #fafafa;
 	height: 550px;
 	border-width: 1.5px;
     border-style: solid;
     border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:gray;
 }
 #table_tile {
 	margin-top: 18px;
-	background-color: #f6f6f6;
+	background-color: #fafafa;
 	height: 345px;
 	border-width: 1.5px;
     border-style: solid;
     border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:gray;
 }
 #overview_tile {
 	margin-top: 18px;
-	background-color: #f6f6f6;
+	background-color: #fafafa;
 	height: 525px;
 	border-width: 1.5px;
     border-style: solid;
     border-color: lightgrey;
+
+    border-top-style:solid;
+	border-top-width:8px;
+	border-top-color:gray;
 }
 #chartContainer {
 	font: 10px sans-serif;
@@ -268,4 +372,33 @@ table rect {
 }
 #who_table {
 	margin-top:-20px;
+}
+.poney {
+  	margin:0%;
+  	background-color:yellow;
+  	width:100%;
+  	padding-bottom:0%;
+  	float:left;
+  	position:relative;
+  	top:-65px;
+}
+.tx {
+  	width:100%;
+  	position:absolute;
+  	text-align:center;
+  	padding-top:100%;
+  	-webkit-transform: translateY(-50%); /* child now centers itself relative to the midline based on own contents */
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  	transform:translateY(-50%);
+}
+.baloney {
+  	margin:0%;
+  	background-color:yellow;
+  	width:100%;
+  	padding-bottom:0%;
+  	float:left;
+  	position:relative;
+  	top:-75px;
 }
