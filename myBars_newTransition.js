@@ -1,6 +1,6 @@
-var margin = {top:20, right:20, bottom:30, left:90},
+var margin = {top:20, right:40, bottom:30, left:60},
 	width = 680 - margin.left - margin.right,
-	height = 500 - margin.top - margin.bottom;
+	height = 520 - margin.top - margin.bottom;
 
 var formatPercent = d3.format(".0%");
 
@@ -47,7 +47,7 @@ var svg = d3.select('#chartContainer').append('svg')
   .append('g')
   	.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-d3.json("netbasedata.json", function(error, data) {
+d3.json("netbasedata2.json", function(error, data) {
 	{if (error) return console.log("there was an error loading the data: " + error);
 	console.log("there are " + data.length + " elements in my dataset");
 	console.log(data)
@@ -68,7 +68,7 @@ d3.json("netbasedata.json", function(error, data) {
 	y.domain([0, d3.max(filteredData, function(d) {return d.value;})])
 	heightScale.domain([0, d3.max(filteredData, function(d) {return d.value;}) ])
 
-	d3.select(".header").selectAll("h1")
+	d3.select(".title_eachbar").selectAll(".title_eachbar_text")
 		.data(data)
 		.text(function(d) {return d.metric; });
 
@@ -81,13 +81,14 @@ d3.json("netbasedata.json", function(error, data) {
 		.attr('x', function(d,i) {
   			return x(d.date)
 		})
+		.style("fill", "#1c578c")
 		/*
 		.attr('y', function(d) {return height - margin.top - margin.bottom - y(d.value)})
 		*/
 		.attr('y', height - margin.top - margin.bottom)
 
 		.transition()
-		.duration(1500)
+		.duration(1000)
 
 		.attr('y', function(d,i) {
   			return height - margin.top - margin.bottom - heightScale(d.value)
@@ -106,22 +107,23 @@ d3.json("netbasedata.json", function(error, data) {
 	svg.append("g")
       	.attr("class", "x axis")
       	.attr("transform", "translate(0," + (height - margin.top -margin.bottom) + ")")
+      	.style("font-size", "8px")
       	.call(xAxis);
 
     svg.append("g")
     	.attr("class", "y axis")
+    	.transition()
+    	.style("font-size", "8px")
+		.duration(1000)
     	.call(yAxis);
 
-function redraw(newData) {
-
-	var rect = svg.selectAll('rect')
-		.data(newData, function(d) {return d.date; });
+function redraw(newData, barColor) {
 
 	x.domain(newData.map(function(d) { return d.date; }));
 	y.domain([0, d3.max(newData, function(d) {return d.value;})])
 	heightScale.domain([0, d3.max(newData, function(d) {return d.value;}) ])
 
-	d3.select(".header").selectAll("h1")
+	d3.select(".title_eachbar").selectAll(".title_eachbar_text")
 		.data(newData)
 		.transition()
 		.duration(1000)
@@ -137,24 +139,17 @@ function redraw(newData) {
       .orient("left")
       .tickSize(10,10,0);
 
-   	rect.enter().append('rect')
+	var rect = svg.selectAll('rect')
+		.data(newData, function(d) {return d.date; });
+   	rect.enter()//.insert("g", ".axis")
+   		.append('rect')
    		.attr('class', 'bar')
    		.attr('width', x.rangeBand())
-		.attr('height', 0)
+		//.attr('height', 0)
 		.attr('x', function(d,i) {
   			return x(d.date)
 		})
-		.attr('y', height - margin.top - margin.bottom)
-
-		.transition()
-		.duration(1500)
-
-		.attr('y', function(d,i) {
-  			return height - margin.top - margin.bottom - heightScale(d.value)
-		})
-		.attr('height', function(d,i) {
-  			return heightScale(d.value)
-		})
+		//.attr('y', height - margin.top - margin.bottom)
 
 		.transition()
 		.duration(1000)
@@ -168,6 +163,7 @@ function redraw(newData) {
 
 		rect.transition()
 			.duration(1000)
+			.style("fill", barColor)
 			.attr('width', x.rangeBand())
 		.attr('height', function(d,i) {
   			return heightScale(d.value)
@@ -208,32 +204,32 @@ d3.selectAll("input[value=net]").on("change", toggleNet);
 
 function togglePosts() {
 	postData = data.filter(function(d) { return d.metric == "posts"; });
-	redraw(postData);
+	redraw(postData, "#1c578c");
 };
 
 function toggleImpressions() {
 	impressionData = data.filter(function(d) {return d.metric == "impressions"; });
-	redraw(impressionData);
+	redraw(impressionData, "#f29e38");
 };
 
 function togglePassion() {
 	passionData = data.filter(function(d) {return d.metric == "passion"; });
-	redraw(passionData);
+	redraw(passionData, "#dd4646");
 };
 
 function togglePositive() {
 	positiveData = data.filter(function(d) {return d.metric == "positive sentiment"; });
-	redraw(positiveData);
+	redraw(positiveData, "#f2d750");
 };
 
 function toggleNegative() {
 	negativeData = data.filter(function(d) {return d.metric == "negative sentiment"; });
-	redraw(negativeData);
+	redraw(negativeData, "#f2e0c9");
 };
 
 function toggleNet() {
 	netsentimentData = data.filter(function(d) {return d.metric == "net sentiment"; });
-	redraw(netsentimentData);
+	redraw(netsentimentData, "#5787a5");
 };
 
 });

@@ -190,35 +190,30 @@
     </div>
 
     <div class="row-fluid">
-        <div class="span12" id="overview_tile">
-        	<!--<div>
-	          	<span class="tile_header">Overview</span>
-	        </div>
+        <div id="overview_tile">
+		    <div class="span12">
+		        <div class="metricFilter">
+	      			<form>
+				        <input type="radio" name="metric" value="posts" id="metricSelector" class="radioFilter" style="vertical-align: middle; margin-top:-1px" checked><span class="radio_label">Posts</span>
 
-	        <br> -->
+		                <input type="radio" name="metric" value="impressions" id="metricSelector" class="radioFilter" style="vertical-align: middle; margin-top:-1px"><span class="radio_label">Impressions</span>
 
-	        <div id="chartContainer"></div>
-	        <div class="metricFilter">
-      			<form>
-			        <input type="radio" name="metric" value="awareness" id="metricSelector" class="radioFilter">Awareness<br>
+		                <input type="radio" name="metric" value="passion" id="metricSelector" class="radioFilter" style="vertical-align: middle; margin-top:-1px"><span class="radio_label">Passion</span>
 
-			        <input type="radio" name="metric" value="impression" id="metricSelector" class="radioFilter" checked>Impression<br>
+		                <input type="radio" name="metric" value="positive" id="metricSelector" class="radioFilter" style="vertical-align: middle; margin-top:-1px"><span class="radio_label">Positive Sentiment</span>
 
-			        <input type="radio" name="metric" value="consideration" id="metricSelector" class="radioFilter">Consideration<br>
+		                <input type="radio" name="metric" value="negative" id="metricSelector" class="radioFilter" style="vertical-align: middle; margin-top:-1px"><span class="radio_label">Negative Sentiment</span>
 
-			        <input type="radio" name="metric" value="recommend" id="metricSelector" class="radioFilter">Recommend<br> 
-
-			        <input type="radio" name="metric" value="value" id="metricSelector" class="radioFilter">Value<br>
-
-			        <input type="radio" name="metric" value="adAwareness" id="metricSelector" class="radioFilter">Ad Awareness<br>
-
-			        <input type="radio" name="metric" value="womExposure" id="metricSelector" class="radioFilter">WOM Exposure<br>
-
-			        <input type="radio" name="metric" value="purchaseIntent" id="metricSelector" class="radioFilter">Purchase Intent<br>
-
-			        <input type="radio" name="metric" value="currentCustomer" id="metricSelector" class="radioFilter">Current Customer<br>
-      			</form>
-    		</div>
+		                <input type="radio" name="metric" value="net" id="metricSelector" class="radioFilter" style="vertical-align: middle; margin-top:-1px"><span class="radio_label">Net Sentiment</span>
+	      			</form>
+	    		</div>
+	    	</div>
+	    	<div class="span12">
+		    	<div class="title_eachbar">
+	                <p class="title_eachbar_text"></p>
+	            </div>
+		        <div id="chartContainer"></div>
+		    </div>
         </div>
     </div>
 
@@ -421,7 +416,9 @@
 	<script src="js/table/rect15PC.js" type="text/javascript"></script>
 	<script src="js/table/rect15Artist.js" type="text/javascript"></script>
 
-<script src="hugeBarSexpotTransitions/filteredBar2.js" type="text/javascript"></script>
+	<script src="myBars_newTransition.js" type="text/javascript"></script>
+<!--<script src="hugeBarSexpotTransitions/filteredBar2.js" type="text/javascript"></script>-->
+
 
 </body>
 </html>

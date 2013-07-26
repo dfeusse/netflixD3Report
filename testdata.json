@@ -9,5 +9,8 @@
 {"metric":"total_likes","date":"June 23","value":32967},
 {"metric":"total_likes","date":"June 30","value":29861},
 {"metric":"total_likes","date":"July 7","value":34658},
-{"metric":"total_likes","date":"July 14","value":23103}
+{"metric":"total_likes","date":"July 14","value":23103},
+{"metric":"total_likes","date":"July 21","value":15291},
+{"metric":"total_likes","date":"July 28","value":21544},
+{"metric":"total_likes","date":"August 4","value":39036}
 ]

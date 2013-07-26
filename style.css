@@ -326,6 +326,7 @@ body {
 .metricFilter {
 	font: 10px sans-serif;
 	float:right;
+	margin-top:5px;
 }
 /*
 .header {
@@ -349,6 +350,9 @@ body {
 
 .x.axis path {
   	display: none;
+}
+.y.axis path {
+	display: none;
 }
 .tooltip {
   	position: absolute;
@@ -401,4 +405,20 @@ table rect {
   	float:left;
   	position:relative;
   	top:-75px;
+}
+/*
+.radioFilter {
+	vertical-align: middle;
+	margin-top: 0;
+}
+*/
+.radio_label {
+	margin-right:10px;
+	margin-left:1.5px;
+	vertical-align: middle;
+}
+.title_eachbar_text {
+	font-size: 17.5px;
+	font-weight: bold;
+	margin-top:-15px;
 }
