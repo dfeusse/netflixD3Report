@@ -1,0 +1,23 @@
+[33mcommit 0012c2945c33f37cc644d7adf6555b4f23ba9ae1[m
+Author: Daniel Feusse <dfeusse@gmail.com>
+Date:   Thu Jul 25 17:32:06 2013 -0700
+
+    fixed the interactive bar graph to some degree, now size and fill is correct, still some odd flickering and axis suck
+
+[33mcommit 91c5005d721e7d82860e7a3a13cb5aad5de49adf[m
+Author: Daniel Feusse <dfeusse@gmail.com>
+Date:   Wed Jul 24 08:05:29 2013 -0700
+
+    last commit before sending initial skeleton to Sue
+
+[33mcommit 7b24a72e5038d0aa1691b862d8dfe76a0133c3e9[m
+Author: Daniel Feusse <dfeusse@gmail.com>
+Date:   Mon Jul 22 18:24:36 2013 -0700
+
+    second commit, making progress
+
+[33mcommit 23885715b2007dc10933ad154753eabe1260745f[m
+Author: Daniel Feusse <dfeusse@gmail.com>
+Date:   Mon Jul 22 16:29:16 2013 -0700
+
+    initial commit

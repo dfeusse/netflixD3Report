@@ -1,6 +1,6 @@
-var margin = {top:20, right:40, bottom:30, left:60},
-	width = 680 - margin.left - margin.right,
-	height = 520 - margin.top - margin.bottom;
+var margin = {top:20, right:40, bottom:0, left:65},
+	width = 720 - margin.left - margin.right,
+	height = 470 - margin.top - margin.bottom;
 
 var formatPercent = d3.format(".0%");
 

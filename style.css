@@ -316,6 +316,7 @@ body {
 	font: 10px sans-serif;
 	position:relative;
 	float:left;
+	margin-left: -10px;
 }
 #energychart {
 	stroke: #777;
